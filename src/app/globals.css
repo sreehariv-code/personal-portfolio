@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ── shadcn CSS variables (light) ──────────────────────────── */
+  :root {
+    --font-space-grotesk: "Space Grotesk", sans-serif;
+
+    --background: 240 11% 96%;       /* #f6f6f8 */
+    --foreground: 215 28% 17%;       /* near slate-900 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+
+    --primary: 219 87% 50%;          /* #135bec */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 20% 91%;
+    --secondary-foreground: 215 28% 17%;
+
+    --muted: 215 20% 91%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 215 20% 91%;
+    --accent-foreground: 215 28% 17%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 82%;
+    --input: 215 20% 82%;
+    --ring: 219 87% 50%;             /* #135bec */
+
+    --radius: 0.5rem;
+  }
+
+  /* ── shadcn CSS variables (dark) ───────────────────────────── */
+  .dark {
+    --background: 220 36% 10%;       /* #101622 */
+    --foreground: 213 31% 91%;       /* near slate-100 */
+
+    --card: 220 32% 13%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 220 32% 13%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 219 87% 50%;          /* #135bec */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 26% 18%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 220 26% 18%;
+    --muted-foreground: 215 16% 57%;
+
+    --accent: 220 26% 18%;
+    --accent-foreground: 213 31% 91%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 213 31% 91%;
+
+    --border: 220 26% 20%;
+    --input: 220 26% 20%;
+    --ring: 219 87% 50%;             /* #135bec */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background-light text-slate-900 font-display antialiased;
+    @apply dark:bg-background-dark dark:text-slate-100;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@layer utilities {
+  .grid-bg {
+    background-image: radial-gradient(
+      circle at 2px 2px,
+      rgba(19, 91, 236, 0.1) 1px,
+      transparent 0
+    );
+    background-size: 40px 40px;
+  }
+}

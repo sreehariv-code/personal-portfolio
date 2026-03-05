@@ -1,0 +1,119 @@
+{
+  "basics": {
+    "name": "Sreehari P V",
+    "phone": "+91 9567453568",
+    "email": "work.sreeharipv@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/sreehari-p-448767100/",
+    "github": "https://github.com/sreehariv-code",
+    "location": "Kerala, India",
+    "summary": "Software Engineer with 2+ years of experience building scalable web and mobile applications across the React.js, Next.js, and React Native ecosystem. Experienced in developing production-grade applications, enterprise mobile solutions, and AI-driven automation systems. Strong background in TypeScript, modern state management (Redux, React Query, Context API), backend systems using Node.js and NestJS, and performance optimization."
+  },
+  "experience": [
+    {
+      "company": "Appmaker.xyz",
+      "location": "Remote / Kerala, India",
+      "role": "React Native Developer",
+      "startDate": "2025-05",
+      "endDate": "Present",
+      "highlights": [
+        "Built a configurable theming engine that lets Shopify merchants convert their storefronts into fully functional native mobile apps.",
+        "Worked on enterprise React Native apps for global brands — push notifications, analytics, secure auth flows (NDA).",
+        "Cut re-render cycles through memoization and lazy loading across core app modules.",
+        "Deepened understanding of RN internals: navigation stacks, rendering cycles, and cross-platform quirks.",
+        "Managed mobile CI/CD and App Store / Play Store release workflows via GitHub Actions.",
+        "Worked with GitHub Actions and mobile deployment workflows for CI/CD and release management."
+      ],
+      "techStack": [
+        "React Native",
+        "TypeScript",
+        "Redux",
+        "Firebase",
+        "REST APIs",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "company": "UVJ Technologies (Calpine Group)",
+      "location": "Kochi, Kerala, India",
+      "role": "Software Engineer",
+      "startDate": "2023-08",
+      "endDate": "2025-04",
+      "highlights": [
+        "Won 1st place at an internal hackathon — built an AI-powered content refresh system that improved SEO rankings by 35%.",
+        "Built a Redis + Sentence Similarity caching layer that cut API response times by 40%.",
+        "Led the React Native Service Provider app from scratch to production deployment.",
+        "Built a multilingual product classification system using LLMs and a dynamic SEO module from web-scraped data.",
+        "Designed a real-time reporting system using Apache Superset.",
+        "Optimized React web app performance through lazy loading, code splitting, and efficient state management."
+      ],
+      "techStack": [
+        "ReactJS",
+        "Next.js",
+        "Node.js",
+        "NestJS",
+        "Flask",
+        "Redis",
+        "LLMs",
+        "Apache Superset"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Government Engineering College",
+      "location": "Sreekrishnapuram, Palakkad",
+      "degree": "Bachelor of Technology",
+      "field": "Computer Science Engineering",
+      "cgpa": "8.05",
+      "startYear": 2019,
+      "endYear": 2023
+    },
+    {
+      "institution": "Gurukulam Public School",
+      "location": "Thrissur, Kerala",
+      "degree": "Higher Secondary Education",
+      "endYear": 2019
+    }
+  ],
+  "projects": [
+    {
+      "name": "The Wild Oasis Website",
+      "tech": ["Next.js 14", "Supabase", "NextAuth", "TailwindCSS", "TypeScript"],
+      "description": "A full hotel booking platform built with Next.js 14 and Supabase. SSR, NextAuth, and a real-time backend — built to production standards, not just for show.",
+      "link": "https://github.com/sreehariv-code/the-world-oasis-app-website",
+      "category": "web"
+    },
+    {
+      "name": "The Wild Oasis (Hotel Management System)",
+      "tech": ["React.js", "React Query", "Supabase"],
+      "description": "Internal dashboard for hotel ops — real-time bookings, room status, and guest management. Built with React Query and Supabase.",
+      "link": "https://github.com/sreehariv-code/world-oasis-react",
+      "category": "web"
+    },
+    {
+      "name": "Fuel Ordering App",
+      "tech": ["React Native", "Context API", "Express", "Node.js"],
+      "description": "Mobile app for doorstep fuel delivery — live booking, real-time tracking, and an Express backend. Built end-to-end solo.",
+      "link": "https://github.com/sreehariv-code/fuel-ordering-system-app",
+      "category": "mobile"
+    },
+    {
+      "name": "Smart Sticky Note App",
+      "tech": ["React.js", "TailwindCSS"],
+      "description": "Note-taking app with color tagging and persistent state. Simple idea, properly executed.",
+      "link": "https://github.com/sreehariv-code/Smart-Sticky-Notes",
+      "category": "web"
+    }
+  ],
+  "skills": {
+    "languages": ["JavaScript", "TypeScript"],
+    "frontend": ["ReactJS", "NextJS", "React Native", "TailwindCSS", "Bootstrap", "Material UI", "SASS"],
+    "backend": ["NodeJS", "Express", "NestJS", "Flask"],
+    "stateManagement": ["Redux", "Context API", "React Query"],
+    "databases": ["Supabase", "MongoDB", "Firebase", "Redis"],
+    "devOps": ["Docker", "Git", "GitHub", "GitLab", "GitHub Actions", "Postman"],
+    "cloudHosting": ["Vercel", "Netlify", "Apache Server"],
+    "aiAutomation": ["Large Language Models (LLMs)", "Sentence Similarity Models", "n8n"],
+    "other": ["RESTful APIs", "Performance Optimization", "App Store Deployment", "Play Store Deployment", "Cross-Browser Compatibility"]
+  }
+}

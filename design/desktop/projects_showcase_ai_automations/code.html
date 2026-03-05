@@ -1,0 +1,217 @@
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg text-white">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">DevPortfolio</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-10 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Experience</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2 px-6 rounded-lg transition-all">
+                        Resume
+                    </button>
+</div>
+<button class="md:hidden text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-10 py-12">
+<!-- Hero Section / Title -->
+<div class="mb-12">
+<h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4">
+                        Project Showcase
+                    </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl leading-relaxed">
+                        Engineering robust solutions at the intersection of <span class="text-primary font-semibold">React</span>, 
+                        <span class="text-primary font-semibold">Node.js</span>, and 
+                        <span class="text-primary font-semibold">AI-driven automation</span>.
+                    </p>
+</div>
+<!-- Filter Tabs -->
+<div class="mb-10 overflow-x-auto">
+<div class="flex border-b border-slate-200 dark:border-slate-800 gap-8 min-w-max">
+<button class="border-b-2 border-primary text-primary pb-4 font-bold text-sm">All Projects</button>
+<button class="border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 pb-4 font-bold text-sm">AI Automations</button>
+<button class="border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 pb-4 font-bold text-sm">Web Apps</button>
+<button class="border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 pb-4 font-bold text-sm">Node.js APIs</button>
+</div>
+</div>
+<!-- Featured Project Card -->
+<div class="mb-12 group">
+<div class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex flex-col lg:flex-row shadow-xl">
+<div class="lg:w-3/5 relative h-64 lg:h-auto overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10"></div>
+<div class="w-full h-full bg-slate-800 flex items-center justify-center p-8">
+<div class="w-full h-full rounded-lg bg-slate-900 border border-slate-700 shadow-2xl flex items-center justify-center relative overflow-hidden" data-alt="Technical n8n workflow diagram with nodes and connections">
+<div class="absolute top-4 left-4 flex gap-2">
+<div class="size-3 rounded-full bg-red-500"></div>
+<div class="size-3 rounded-full bg-yellow-500"></div>
+<div class="size-3 rounded-full bg-green-500"></div>
+</div>
+<!-- Simplified workflow visual -->
+<div class="flex items-center gap-6">
+<div class="p-4 bg-white/10 rounded-lg border border-white/20"><span class="material-symbols-outlined text-primary scale-150">webhook</span></div>
+<div class="h-px w-12 bg-slate-600"></div>
+<div class="p-4 bg-primary/20 rounded-lg border border-primary/40"><span class="material-symbols-outlined text-primary scale-150">psychology</span></div>
+<div class="h-px w-12 bg-slate-600"></div>
+<div class="p-4 bg-white/10 rounded-lg border border-white/20"><span class="material-symbols-outlined text-primary scale-150">chat_bubble</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-2/5 p-8 flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-primary/10 text-primary text-[10px] uppercase font-bold tracking-widest px-2 py-1 rounded">Featured</span>
+<span class="bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] uppercase font-bold tracking-widest px-2 py-1 rounded">AI Automation</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">AI Automation Workflow</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                Advanced multi-step automation using n8n and OpenAI. This system monitors incoming customer inquiries via Slack, categorizes intent, and generates draft responses using specialized LLM agents.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-medium">n8n</span>
+<span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-medium">OpenAI</span>
+<span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-medium">Slack API</span>
+<span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-medium">PostgreSQL</span>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+                                    Live Demo
+                                </button>
+<button class="flex-1 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm">code</span>
+                                    GitHub
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden" data-alt="Screenshot of a sleek SaaS dashboard interface">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-20">
+<button class="bg-primary text-white p-2 rounded-full hover:scale-110 transition-transform"><span class="material-symbols-outlined">visibility</span></button>
+<button class="bg-white text-slate-900 p-2 rounded-full hover:scale-110 transition-transform"><span class="material-symbols-outlined">code</span></button>
+</div>
+<div class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-1 rounded">React</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h4 class="text-xl font-bold mb-2">CloudMetrics SaaS</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1">Real-time analytics dashboard with custom charting components and serverless data ingestion.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-[10px] font-bold">Next.js</span>
+<span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-[10px] font-bold">Tailwind</span>
+<span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-[10px] font-bold">Recharts</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden" data-alt="Abstract visualization of an API data flow">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-20">
+<button class="bg-primary text-white p-2 rounded-full hover:scale-110 transition-transform"><span class="material-symbols-outlined">visibility</span></button>
+<button class="bg-white text-slate-900 p-2 rounded-full hover:scale-110 transition-transform"><span class="material-symbols-outlined">code</span></button>
+</div>
+<div class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-1 rounded">Node.js</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h4 class="text-xl font-bold mb-2">E-commerce Backend</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1">High-performance REST API with Redis caching, JWT auth, and Stripe integration for payments.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-[10px] font-bold">Express</span>
+<span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-[10px] font-bold">Redis</span>
+<span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-[10px] font-bold">Prisma</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden" data-alt="Clean minimal portfolio design screenshot">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-20">
+<button class="bg-primary text-white p-2 rounded-full hover:scale-110 transition-transform"><span class="material-symbols-outlined">visibility</span></button>
+<button class="bg-white text-slate-900 p-2 rounded-full hover:scale-110 transition-transform"><span class="material-symbols-outlined">code</span></button>
+</div>
+<div class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-1 rounded">Frontend</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h4 class="text-xl font-bold mb-2">Designer Portfolio</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1">A highly interactive portfolio for a UI designer featuring smooth Framer Motion animations.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-[10px] font-bold">Next.js</span>
+<span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-[10px] font-bold">Framer</span>
+<span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-[10px] font-bold">Vercel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer CTA -->
+<div class="mt-20 p-10 bg-primary rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-white overflow-hidden relative">
+<div class="absolute -right-20 -bottom-20 opacity-10">
+<span class="material-symbols-outlined text-[300px] leading-none">auto_awesome</span>
+</div>
+<div class="relative z-10 text-center md:text-left">
+<h2 class="text-3xl font-bold mb-2">Interested in working together?</h2>
+<p class="text-white/80">I'm currently available for freelance projects and full-time roles.</p>
+</div>
+<button class="relative z-10 bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition-colors shadow-lg">
+                        Get In Touch
+                    </button>
+</div>
+</main>
+<!-- Small Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-6 md:px-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-sm">© 2024 DevPortfolio. Built with Tailwind and Passion.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary transition-colors text-sm" href="#">GitHub</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
