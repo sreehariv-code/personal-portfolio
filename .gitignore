@@ -29,6 +29,20 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local dev tooling
+.claude/
+.mcp.json
+
+# planning & scratch files
+plans/
+Github_profile.md
+
+# duplicate data file
+/data/
+
+# design references
+/design/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
