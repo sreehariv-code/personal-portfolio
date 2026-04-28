@@ -1,40 +1,24 @@
-# Sreehari P V — Personal Portfolio
+# Hey, I'm Sreehari
 
-Personal portfolio site built with Next.js 15, TailwindCSS, and Framer Motion. Statically exported and ready for deployment on any static host.
+Software engineer with 2+ years building web and mobile apps — React, Next.js, React Native. This is my corner of the internet.
 
-## Tech Stack
+Built with Next.js 15, TailwindCSS, and Framer Motion. Statically exported, no server needed.
 
-- **Framework:** Next.js 15 (static export)
-- **Styling:** TailwindCSS, Framer Motion
-- **UI Components:** Radix UI, shadcn/ui
-- **Language:** TypeScript
-
-## Sections
-
-- **Hero** — Introduction and quick links
-- **Projects** — Selected projects with tech stack and GitHub links
-- **Experience** — Work history and skills timeline
-- **Contact** — Contact form and social links
-
-## Getting Started
+## Running locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-App runs at `http://localhost:4567`
+Runs at `http://localhost:4567`
 
-## Build
+## Stack
 
-```bash
-npm run build
-```
+Next.js · TailwindCSS · Framer Motion · TypeScript · Radix UI
 
-Outputs a static site to the `out/` directory, ready to serve on GitHub Pages, Netlify, or any static host.
+## Find me
 
-## Contact
-
-- Email: work.sreeharipv@gmail.com
-- GitHub: [sreehariv-code](https://github.com/sreehariv-code)
-- LinkedIn: [sreehari-p](https://www.linkedin.com/in/sreehari-p-448767100/)
+- [github.com/sreehariv-code](https://github.com/sreehariv-code)
+- [linkedin.com/in/sreehari-p](https://www.linkedin.com/in/sreehari-p-448767100/)
+- work.sreeharipv@gmail.com
