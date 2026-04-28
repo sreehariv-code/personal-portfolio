@@ -48,7 +48,7 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!name.trim() || !email.trim() || !message.trim()) {
@@ -58,16 +58,35 @@ export default function Contact() {
 
     setSending(true);
 
-    /* Simulate a short send delay then show success */
-    setTimeout(() => {
-      setSending(false);
-      toast.success("Message sent!", {
-        description: "Thanks! I'll get back to you within 24 hours.",
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          name,
+          email,
+          message,
+        }),
       });
-      setName("");
-      setEmail("");
-      setMessage("");
-    }, 1000);
+
+      const data = await res.json();
+
+      if (data.success) {
+        toast.success("Message sent!", {
+          description: "Thanks! I'll get back to you within 24 hours.",
+        });
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        toast.error("Something went wrong. Try emailing me directly.");
+      }
+    } catch {
+      toast.error("Something went wrong. Try emailing me directly.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
