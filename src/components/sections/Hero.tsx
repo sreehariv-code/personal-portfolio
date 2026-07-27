@@ -328,7 +328,7 @@ export default function Hero() {
         </div>
 
         {/* ── feature cards ── */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-20 md:mt-28">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-20 md:mt-28">
           {FEATURE_CARDS.map(({ icon: Icon, title, desc }, i) => (
             <motion.div
               key={title}

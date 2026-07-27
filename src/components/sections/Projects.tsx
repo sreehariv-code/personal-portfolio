@@ -58,30 +58,30 @@ function FeaturedVisual({ project }: { project: Project }) {
     : [Globe, Database, ShieldCheck];
 
   return (
-    <div className="w-full h-full bg-slate-900 flex items-center justify-center relative overflow-hidden p-8">
+    <div className="w-full h-full bg-slate-900 flex items-center justify-center relative overflow-hidden p-6 sm:p-8">
       {/* subtle glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
       {/* window dots */}
       <div className="absolute top-4 left-4 flex gap-1.5">
-        <span className="w-3 h-3 rounded-full bg-red-500/80" />
-        <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
-        <span className="w-3 h-3 rounded-full bg-green-500/80" />
+        <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500/80" />
+        <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500/80" />
+        <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500/80" />
       </div>
-      {/* node flow */}
-      <div className="relative z-10 flex items-center gap-4">
+      {/* node flow — sizes step up at sm so the row never outgrows its padding */}
+      <div className="relative z-10 flex items-center gap-2 sm:gap-4">
         {nodes.map((Icon, i) => (
-          <div key={i} className="flex items-center gap-4">
+          <div key={i} className="flex items-center gap-2 sm:gap-4">
             <div
-              className={`p-4 rounded-xl border ${
+              className={`p-3 sm:p-4 rounded-xl border ${
                 i === 1
                   ? "bg-primary/20 border-primary/40"
                   : "bg-white/5 border-white/10"
               }`}
             >
-              <Icon size={28} className="text-primary" />
+              <Icon className="w-5 h-5 sm:w-7 sm:h-7 text-primary" />
             </div>
             {i < nodes.length - 1 && (
-              <div className="h-px w-8 bg-slate-600" />
+              <div className="h-px w-4 sm:w-8 bg-slate-600" />
             )}
           </div>
         ))}
@@ -102,12 +102,12 @@ function FeaturedCard({ project }: { project: Project }) {
       className="mb-10 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 overflow-hidden shadow-xl flex flex-col lg:flex-row"
     >
       {/* visual */}
-      <div className="lg:w-3/5 h-56 lg:h-auto relative">
+      <div className="lg:w-3/5 h-44 sm:h-56 lg:h-auto relative">
         <FeaturedVisual project={project} />
       </div>
 
       {/* info */}
-      <div className="lg:w-2/5 p-8 flex flex-col justify-center gap-5">
+      <div className="lg:w-2/5 p-6 sm:p-8 flex flex-col justify-center gap-4 sm:gap-5">
         <div className="flex items-center gap-2">
           <span className="bg-primary/10 text-primary text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded">
             Featured
@@ -137,12 +137,14 @@ function FeaturedCard({ project }: { project: Project }) {
           ))}
         </div>
 
-        <div className="flex gap-3">
+        {/* stacked below sm: side-by-side boxes are too narrow for
+            "View Project" and it wraps, making the buttons uneven */}
+        <div className="flex flex-col sm:flex-row gap-3">
           <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg text-sm transition-all"
+            className="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg text-sm whitespace-nowrap transition-all"
           >
             <ExternalLink size={15} />
             View Project
@@ -151,7 +153,7 @@ function FeaturedCard({ project }: { project: Project }) {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold py-3 rounded-lg text-sm transition-all"
+            className="flex-1 flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold py-3 rounded-lg text-sm whitespace-nowrap transition-all"
           >
             <Github size={15} />
             GitHub
@@ -180,8 +182,9 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
       <div className="h-44 bg-slate-100 dark:bg-slate-800 relative overflow-hidden flex items-center justify-center">
         <Icon size={48} className="text-slate-300 dark:text-slate-600" />
 
-        {/* hover overlay — desktop only */}
-        <div className="hidden md:flex absolute inset-0 bg-gradient-to-t from-slate-900/80 to-slate-900/20 opacity-0 group-hover:opacity-100 transition-opacity items-center justify-center gap-3">
+        {/* hover overlay — only on devices that actually hover, else the
+            links are unreachable (touch tablets report hover: none) */}
+        <div className="hidden [@media(hover:hover)]:flex absolute inset-0 bg-gradient-to-t from-slate-900/80 to-slate-900/20 opacity-0 group-hover:opacity-100 transition-opacity items-center justify-center gap-3">
           <a
             href={project.link}
             target="_blank"
@@ -230,8 +233,8 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
           )}
         </div>
 
-        {/* action buttons — mobile only (desktop uses hover overlay) */}
-        <div className="flex md:hidden gap-2 pt-1">
+        {/* action buttons — shown wherever hover isn't available */}
+        <div className="flex [@media(hover:hover)]:hidden gap-2 pt-1">
           <a
             href={project.link}
             target="_blank"
@@ -322,7 +325,7 @@ export default function Projects() {
         <FeaturedCard project={featured} />
 
         {/* ── project grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {filtered.map((project, i) => (
             <ProjectCard key={project.name} project={project} delay={i * 0.08} />
           ))}
